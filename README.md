@@ -1,6 +1,6 @@
 # Tixcraft Captcha Model
 
-Chinese version: [README_zh.md](./README_zh.md)
+中文版本: [README_zh.md](./README_zh.md)
 
 ## Overview
 
