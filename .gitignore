@@ -1,6 +1,5 @@
 test_real.py
-best_pretrain.pth
-best_finetune.pth
+*.pth
 venv/
 real_img/
 synthetic/
