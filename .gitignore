@@ -4,4 +4,4 @@ best_finetune.pth
 venv/
 real_img/
 synthetic/
-__pycache__/
+__pycache__/*.pth
