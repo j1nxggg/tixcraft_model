@@ -3,4 +3,5 @@ test_real.py
 venv/
 real_img/
 synthetic/
-__pycache__/*.pth
+__pycache__/
+*.7z
