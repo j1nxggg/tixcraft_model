@@ -210,9 +210,10 @@ python finetune.py
 
 ## 模型權重
 
-權重透過 GitHub Releases 發佈
+模型與 real_img 透過 GitHub Releases 發佈。
 
-Releases 頁面：https://github.com/kenny1108Xiang/tixcraft_model/releases
+- [最新模型權重（Latest Release）](https://github.com/kenny1108Xiang/tixcraft_model/releases/latest)
+- [Oficial Captcha Picture（real_img 資料集）](https://github.com/kenny1108Xiang/tixcraft_model/releases/tag/Real_Img)
 
 ## 限制
 
