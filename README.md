@@ -1,54 +1,38 @@
 # Tixcraft Captcha Model
 
-A captcha recognition project based on PyTorch, designed for 4-character lowercase English captcha images.
+Chinese version: [README_zh.md](./README_zh.md)
 
-This repository includes:
+## Overview
 
-- synthetic captcha image generation
+This project is a PyTorch-based captcha recognition model for 4-character lowercase English captchas.
+
+It includes:
+
+- synthetic captcha generation
 - dataset loading for both synthetic and real images
-- a CNN + Transformer model for fixed-length captcha recognition
+- a CNN + Transformer based recognition model
 - pretraining on synthetic data
 - finetuning on real captcha images
 
-## Project Overview
+The project treats captcha recognition as a fixed-length sequence prediction task rather than explicit character segmentation.
 
-This project treats captcha recognition as a fixed-length sequence prediction task.
+## Features
 
-The target captcha format is:
+- Supports 4-character lowercase English captchas
+- Uses synthetic data generation for pretraining
+- Supports finetuning on real captcha images
+- Uses a CNN + Transformer Encoder/Decoder architecture
+- Uses fixed learnable queries for position-wise character prediction
 
-- 4 characters
-- lowercase English letters only (`a-z`)
-
-The training pipeline is divided into two stages:
-
-1. Pretrain the model on synthetic captcha images
-2. Finetune the pretrained model on real captcha images
-
-## Model Architecture
-
-The model is implemented in `model.py` and is named `CaptchaTransformer`.
-
-Architecture summary:
-
-1. Input image is converted to grayscale and resized to `32 x 128`
-2. A CNN backbone extracts visual features
-3. The feature map is converted into a sequence
-4. Positional encoding is added
-5. A Transformer encoder models global context
-6. Four learnable queries are passed into a Transformer decoder
-7. Each query predicts one character position
-8. Final output shape is `(B, 4, 26)`
-
-This design avoids explicit character segmentation and directly predicts the full 4-character captcha.
-
-## Repository Structure
+## Project Structure
 
 ```text
 .
-├── create_img.py         # Generate synthetic captcha images
-├── dataset.py            # Dataset definition for synthetic and real images
-├── model.py              # CNN + Transformer model
-├── train.py              # Pretrain on synthetic images
-├── finetune.py           # Finetune on real images
-├── SpicyRice-Regular.ttf # Font used for synthetic data generation
-└── README.md
+├── create_img.py
+├── dataset.py
+├── model.py
+├── train.py
+├── finetune.py
+├── SpicyRice-Regular.ttf
+├── README.md
+└── README_zh.md
