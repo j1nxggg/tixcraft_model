@@ -8,7 +8,7 @@ A PyTorch-based captcha recognition model for 4-character lowercase English capt
 
 The pipeline covers synthetic captcha generation, dataset loading, model training on synthetic data, and finetuning on real captcha images. Recognition is treated as a fixed-length sequence prediction task — no character segmentation involved.
 
-![Pipeline](./assets/pipeline_en.svg)
+![Pipeline](../assets/pipeline_en.svg)
 
 ## Project Structure
 
